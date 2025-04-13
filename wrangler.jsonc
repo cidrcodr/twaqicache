@@ -6,8 +6,25 @@
 	"observability": {
 		"enabled": true
 	},
-	"kv_namespaces": [{
-		"binding": "TAIWAN_AQI_CACHE",
-		"id": "2c4e031154014e7baaba49c4426702a9"
-	}]
+	"env": {
+		"dev": {
+			"name": "twaqicache-dev",
+			"kv_namespaces": [
+				{
+					"binding": "TAIWAN_AQI_CACHE",
+					"id": "d8e13a886c9b4735be94ce61081f1efe",
+					"preview_id": "2c4684a405f94f809323ea18c6c1609f"
+				}
+			]
+		},
+		"prod": {
+			"name": "twaqicache",
+			"kv_namespaces": [
+				{
+					"binding": "TAIWAN_AQI_CACHE",
+					"id": "2c4e031154014e7baaba49c4426702a9"
+				}
+			]
+		}
+	}
 }
